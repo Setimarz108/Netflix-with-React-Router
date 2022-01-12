@@ -10,12 +10,16 @@ const params = useParams()
 
  const [movie, setMovie] = useState(null)
 
+
 useEffect(() => {
-    effect
-    return () => {
-        cleanup
-    }
-}, [input])
+   
+    const movieId = params.movie.imdbID
+    const movieDetails = .find(movie => movie.imdbID === movieId)
+    
+}, [])
+
+
+
     return (
         <div>
             <h1>testing</h1>
