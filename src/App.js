@@ -5,6 +5,7 @@ import FooterPart from "./components/Footer/FooterPart";
 import MovieList from "./components/SingleMoovie/MovieList";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TvShows from "./components/TvShows";
+import MovieDetails from "./components/MovieDetails";
 
 function App() {
   return (
@@ -13,8 +14,8 @@ function App() {
         <MyNav />
         <Routes>
           <Route path="/TvShows" element={<TvShows />} />
-
           <Route path="/" element={<MovieList />}></Route>
+          <Route path="/MovieDetails/:movieId" element={<MovieDetails/>}></Route>
         </Routes>
         <FooterPart />
       </div>

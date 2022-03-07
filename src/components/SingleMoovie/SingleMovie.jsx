@@ -22,7 +22,8 @@ class SingleMovie extends Component {
             (movie, i) => (
               /* i < 6 && ( */
               <Col key={i} xs="12" sm="6" md="3" className="mb-5 mt-2">
-                <img
+                <Link to={"/MovieDetails" + movie.imdbID} >
+                   <img
                   src={movie.Poster}
                   style={{ height: "100%", objectFit: "cover" }}
                   className="w-100 img-fluid rounded images"
@@ -40,9 +41,9 @@ class SingleMovie extends Component {
                     console.log(this.state);
                   }}
                 />
-                <Link to={"/MovieDetails" + movie.imdbID} ><Button className="mt-2 mb-2" style={{backgroundColor:"#BE302C"}}>Details</Button></Link>
+           </Link>
               </Col>
-             
+            
             )
             /*  ) */
           )}
